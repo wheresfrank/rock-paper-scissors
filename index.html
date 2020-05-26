@@ -8,6 +8,55 @@
         <P>Do you have what it takes to defeat a machine in Rock, Paper, Scissors?</P>
         <p>&nbsp;</p>
         <p>You better...</p>
+        <p>&nbsp;</p>
+        <script type="text/javascript">
 
+        // Computer randomly picking rock, paper, or scissors
+            function computerPlay(items) {
+                return items[Math.floor(Math.random()*items.length)];
+            };
+            const items = ['rock', 'paper', 'scissors'];
+            const computerSelection = computerPlay(items)   
+            console.log('The computer chose ' + computerSelection);
+
+        // Prompt for player's losing choice
+        const playerSelection = prompt('Will it be rock, paper, or scissors?');
+         
+        // Game Play    
+            function playRound(playerSelection, computerSelection) {
+            if (playerSelection.toLowerCase() == 'rock') {
+                if (computerSelection == 'rock') {
+                   alert ( 'You tie! You and the computer played rock.' );
+                } else if (computerSelection == 'paper') {
+                    alert ( 'You lose! Computer played paper. Paper beats rock.');
+                } else {
+                    alert ( 'You Win! Computer played scissors. Rock beats scissors.' );
+                };
+            } else if (playerSelection.toLowerCase() == 'paper') {
+               if (computerSelection == 'paper') {
+                    alert ( 'You tie! You and the computer played paper.');
+                } else if (computerSelection == 'scissors') {
+                    alert ( 'You lose! Compuer played scissors. Scissors beat paper.');
+                } else {
+                    alert ( 'You Win! Computer played rock. Paper beats rock.' );
+                };
+            } else if (playerSelection.toLowerCase() == 'scissors') {
+                if (computerSelection == 'scissors') {
+                    alert ( 'You tie! You and the computer played scissors.' );
+               } else if (computerSelection == 'rock') {
+                    alert ( 'You lose! Computer played rock. Rock beats scissors.');
+                } else {
+                    alert ( 'You Win! Computer played paper. Scissors beat paper');
+                };
+            } else {
+                alert ( 'You lose! You played ' + playerSelection + '. That is not a thing.' );
+            };
+           };
+        
+        playRound(playerSelection, computerSelection);
+
+            console.log('Your choice is ' + playerSelection.toLocaleLowerCase());
+            //frank's attempt at javascript
+        </script>
     </body>
 </html>
