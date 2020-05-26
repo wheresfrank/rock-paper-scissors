@@ -4,11 +4,10 @@
         <title>Rock | Paper | Scissors</title>
     </head>
     <body>
-        <h1>Welcome to ULTIMATE RPS</h1>
+        <h1>Welcome to ULTIMATE Rock, Paper, Scissors</h1>
         <P>Do you have what it takes to defeat a machine in Rock, Paper, Scissors?</P>
-        <p>&nbsp;</p>
-        <p>You better...</p>
-        <p>&nbsp;</p>
+        <p>It is doubful, but you may try if you'd like.</p>
+        <p>Refresh the page to play again.</p>
         <script type="text/javascript">
 
         // Computer randomly picking rock, paper, or scissors
@@ -16,11 +15,8 @@
                 return items[Math.floor(Math.random()*items.length)];
             };
             const items = ['rock', 'paper', 'scissors'];
-            const computerSelection = computerPlay(items)   
-            console.log('The computer chose ' + computerSelection);
+            let computerSelection = computerPlay(items);
 
-        // Prompt for player's losing choice
-        const playerSelection = prompt('Will it be rock, paper, or scissors?');
          
         // Game Play    
             function playRound(playerSelection, computerSelection) {
@@ -29,34 +25,80 @@
                    alert ( 'You tie! You and the computer played rock.' );
                 } else if (computerSelection == 'paper') {
                     alert ( 'You lose! Computer played paper. Paper beats rock.');
+                    computerScore = computerScore + 1;
                 } else {
-                    alert ( 'You Win! Computer played scissors. Rock beats scissors.' );
+                    alert ( 'You Win! Computer played scissors. Rock beats scissors.');
+                    playerScore = playerScore + 1;
                 };
             } else if (playerSelection.toLowerCase() == 'paper') {
                if (computerSelection == 'paper') {
                     alert ( 'You tie! You and the computer played paper.');
                 } else if (computerSelection == 'scissors') {
                     alert ( 'You lose! Compuer played scissors. Scissors beat paper.');
+                    computerScore = computerScore + 1;
                 } else {
                     alert ( 'You Win! Computer played rock. Paper beats rock.' );
+                    playerScore = playerScore + 1;
                 };
             } else if (playerSelection.toLowerCase() == 'scissors') {
                 if (computerSelection == 'scissors') {
                     alert ( 'You tie! You and the computer played scissors.' );
                } else if (computerSelection == 'rock') {
                     alert ( 'You lose! Computer played rock. Rock beats scissors.');
+                    computerScore = computerScore + 1;
                 } else {
                     alert ( 'You Win! Computer played paper. Scissors beat paper');
+                    playerScore = playerScore + 1;
                 };
             } else {
                 alert ( 'You lose! You played ' + playerSelection + '. That is not a thing.' );
+                computerScore = computerScore + 1;
             };
            };
         
-        playRound(playerSelection, computerSelection);
-
-            console.log('Your choice is ' + playerSelection.toLocaleLowerCase());
-            //frank's attempt at javascript
+        // Gotta keep score
+        let computerScore = 0;
+        let playerScore = 0;
+        
+        function game() {
+            playerSelection = prompt('Game is five rounds.\nRound 1 of 5\nWill it be rock, paper, or scissors?');
+            computerPlay(items);
+            computerSelection = computerPlay(items);
+            playRound(playerSelection, computerSelection);
+            console.log('Round 1: Computer played ' + computerSelection + ' & Human played ' + playerSelection);
+            playerSelection = prompt('Round 2 of 5\nRock, paper, or scissors?');
+            computerPlay(items);
+            computerSelection = computerPlay(items);
+            playRound(playerSelection, computerSelection);
+            console.log('Round 2: Computer played ' + computerSelection + ' & Human played ' + playerSelection);
+            playerSelection = prompt('Round 3 of 5\nRock, paper, or scissors?');
+            computerPlay(items);
+            computerSelection = computerPlay(items);
+            playRound(playerSelection, computerSelection);
+            console.log('Round 3: Computer played ' + computerSelection + ' & Human played ' + playerSelection);
+            playerSelection = prompt('Round 4 of 5\nRock, paper, or scissors?');
+            computerPlay(items);
+            computerSelection = computerPlay(items);
+            playRound(playerSelection, computerSelection);
+            console.log('Round 4: Computer played ' + computerSelection + ' & Human played ' + playerSelection);
+            playerSelection = prompt('Final Round!\nMake it count.\nRock, paper, or scissors?');
+            computerPlay(items);
+            computerSelection = computerPlay(items);
+            playRound(playerSelection, computerSelection);
+            console.log('Round 5: Computer played ' + computerSelection + ' & Human played ' + playerSelection);
+            if (playerScore < computerScore) {
+                alert ( 'Congrats loser! You lost.\nScore: Superior Computer ' + computerScore + ' - Dummy Human ' + playerScore );
+                console.log('Final Score: Computer ' + computerScore + ' - Human ' + playerScore);
+            } else if (playerScore > computerScore) {
+                alert ( 'You got luck this time.\nScore: Human ' + playerScore + ' - Computer ' + computerScore );
+                console.log('Final Score: Lucky Human ' + playerScore + ' - Unfortunate Computer ' + computerScore);
+            } else {
+                alert ( 'It was a tie. So unsatisfying\nScore: Inferior Human ' + playerScore + ' - Supreme Computer ' + computerScore );
+                console.log('Final Score: Human ' + playerScore + ' - Computer ' + computerScore);
+            }
+        }
+        game()
+            //Thank you for putting up with Frank's attempt at javascript
         </script>
     </body>
 </html>
