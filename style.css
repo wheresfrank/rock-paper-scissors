@@ -1,0 +1,69 @@
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 10px;
+}
+
+p.tally {
+    color: black;
+    font-size: xx-large;
+}
+
+h2.score {
+    color: black;
+    background-color: cyan;
+    border: 2px solid black;
+    padding-top: 10px;
+    font-size: larger;
+}
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+}
+
+.rules {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.results {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td.score {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+img.button {
+    border: 3px solid black;
+    height: 300px;
+    padding: 10px 10px 10px 10px;
+    
+}
+
+img.button:hover {
+    opacity: 80%;
+}
