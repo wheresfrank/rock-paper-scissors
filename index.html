@@ -88,17 +88,19 @@
 
         // Game time  
             function game() {
-                if (round < 5) {
+                do {
                 computerPlay(items);
                 computerSelection = computerPlay(items);
                 playRound(playerSelection, computerSelection);
                 document.getElementById('computerScore').innerHTML = computerScore;
                 document.getElementById('playerScore').innerHTML = playerScore;
-                document.getElementById('round').innerHTML = 'Round ' + (round + 1) + ' of 5';
+                document.getElementById('round').innerHTML = 'Round ' + (round + 2) + ' of 5';
                 round++;
-                } else { 
-                finalScore();
-                };
+                } while (round > 5);
+                if (round == 5) {
+                    finalScore();
+                    location.reload();
+                } else {};                
             };
 
         // Thank you for putting up with Frank's attempt at javascript
