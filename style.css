@@ -1,49 +1,65 @@
 body {
-    background-color: whitesmoke;
+    background-color: white;
+    margin:0;
+    color: #452cd6;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 h1 {
-    color: black;
     text-align: center;
-    font-size: 40px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-bottom: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: 900;
+    padding-bottom: 0px;
+}
+
+.header {
+    background-color: #ff30d6;
+    text-align: center;
+    padding: 25px 0px 10px 0px;
 }
 
 h2 {
-    color: black;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif;
     padding-bottom: 10px;
 }
 
-p.tally {
-    color: black;
-    font-size: xx-large;
+h2.round {
+    color: #452cd6;
+    font-size: 36px;
 }
 
-h2.score {
-    color: black;
-    background-color: cyan;
-    border: 2px solid black;
-    padding-top: 10px;
-    font-size: larger;
-}
-
-p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: medium;
-}
-
-.rules {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
+h2.tally {
+    color: #452cd6;
+    font-size: 36px;
     text-align: center;
 }
 
-table.center {
+h2.score {
+    color: b#452cd6;
+    background-color: #45e9ff;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+p {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: medium;
+}
+
+p.rules {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+table.buttons {
     margin-left: auto;
     margin-right: auto;
+    border: 0px;
 }
 
 table.results {
@@ -52,18 +68,17 @@ table.results {
 }
 
 th, td.score {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: "Arial Black", Gadget, sans-serif;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 img.button {
-    border: 3px solid black;
     height: 300px;
-    padding: 10px 10px 10px 10px;
-    
+    padding: 10px 10px 10px 10px;    
 }
 
 img.button:hover {
-    opacity: 80%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
