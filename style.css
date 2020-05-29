@@ -7,17 +7,18 @@ body {
 
 h1 {
     text-align: center;
-    color: white;
-    font-size: 50px;
+    color: #452cd6;
+    font-size: 35px;
     font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
     padding-bottom: 0px;
 }
 
 .header {
-    background-color: #ff30d6;
+    background-color: #45e9ff;
     text-align: center;
     padding: 25px 0px 10px 0px;
+    box-shadow: 0px 0px 8px 0px;
 }
 
 h2 {
@@ -28,20 +29,23 @@ h2 {
 
 h2.round {
     color: #452cd6;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 h2.tally {
     color: #452cd6;
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
 }
 
-h2.score {
-    color: b#452cd6;
-    background-color: #45e9ff;
-    padding-top: 10px;
-    font-size: 30px;
+.score {
+    color: white;
+    background-color: #ff30d6;
+    vertical-align: middle;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 8px 0px 8px 0px #452cd6;
+    font-size: 20px;
 }
 
 p {
@@ -51,9 +55,9 @@ p {
 
 p.rules {
     font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    color: white;
+    color: #452cd6;
 }
 
 table.buttons {
@@ -67,18 +71,20 @@ table.results {
     margin-right: auto;
 }
 
-th, td.score {
+th, td.scores {
     font-family: "Arial Black", Gadget, sans-serif;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 img.button {
-    height: 300px;
+    height: 200px;
     padding: 10px 10px 10px 10px;    
 }
 
-img.button:hover {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+@media (hover: hover) {
+    img.button:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+}
 }
