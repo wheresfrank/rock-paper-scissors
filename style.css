@@ -8,7 +8,7 @@ body {
 h1 {
     text-align: center;
     color: #452cd6;
-    font-size: 35px;
+    font-size: 40px;
     font-family: "Arial Black", Gadget, sans-serif;
     font-weight: 900;
     padding-bottom: 0px;
@@ -45,7 +45,7 @@ h2.tally {
     height: 50px;
     line-height: 50px;
     box-shadow: 8px 0px 8px 0px #452cd6;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 p {
