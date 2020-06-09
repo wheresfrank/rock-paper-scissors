@@ -5,6 +5,26 @@ body {
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
+a:link {
+color: #452cd6;
+text-decoration: none;
+}
+
+a:visited {
+color: #452cd6;
+text-decoration: none;
+}
+
+a:hover {
+color: #372f64;
+text-decoration: none;
+}
+
+a:active {
+color: #372f64;
+text-decoration: none;
+}
+
 h1 {
     text-align: center;
     color: #452cd6;
@@ -19,6 +39,13 @@ h1 {
     text-align: center;
     padding: 25px 0px 10px 0px;
     box-shadow: 0px 0px 8px 0px;
+}
+
+footer {
+    margin-top: 50px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
 }
 
 h2 {
@@ -86,5 +113,5 @@ img.button {
     img.button:hover {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
-}
+    }
 }
