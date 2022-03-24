@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <title>Rock | Paper | Scissors</title>
     </head>
     <body>
-        <div class="header">
-        <h1>ULTIMATE Rock Paper Scissors</h1>
-        <P class="rules">Do you have what it takes to defeat a machine in Rock, Paper, Scissors?
-        <br>The entity with highest score after 5 rounds will emerge the victor.</p></div>
-        </div>
-        <h2 class="round" id="round">Round 1 of 5. Choose Wisely.</h2>
 
-        <table class="buttons">
-            <tr>
-                <td><img class="button" onclick="rockButton()" src="images/rock.png"></a></td>
-                <td><img class="button" onClick="paperButton()" src="images/paper.png"></a></td>
-                <td><img class="button" onClick="scissorsButton()" src="images/scissors.png"></a></td>
-            </tr>
-        </table>
-        <br>
-
-        <div class='score'>
-            <h2 id="score">Score</h2>
-        </div>
-
-        <table class="results">
-            <tr>
-                <td class="scores"><h2 class="tally" id='playerScore'>Inferior Human:<br>0</h2></h2></td>
-                <td class="scores"><h2 class="tally" id='computerScore'>Superior Machine:<br>0</h2></h2></td>
-            </tr>
-        </table>
+        <section class="header hero is-success has-text-centered">
+            <div class="hero-body">
+                <p class="title">
+                    ULTIMATE Rock Paper Scissors
+                </p>
+                <p class="subtitle is-size-6 mt-5">
+                    Do you have what it takes to defeat a machine in Rock, Paper, Scissors?
+                    <br>The entity with highest score after 5 rounds will emerge the victor.
+                </p>
+            </div>
+        </section>
         
-        <footer>
-        <a href="https://www.vecteezy.com/free-vector/rock-paper-scissors" target="_blank">Rock Paper Scissors Vectors by Vecteezy</a>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   
-        Created by Frank Johnette for 
-        <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>
-        </footer>
+        <section>
+            <div class="columns mt-2">
+                <div class="column pb-3">
+                    <p class="tally title has-text-centered mb-2" id='playerScore'>Inferior Human: <strong>0</strong></p>
+
+                    <div class="columns level-item has-text-centered">
+                        <div class="column is-one-third">
+                            <img class="image is-4by5 pt-0" onclick="rockButton()" src="images/rock.png"></a>
+                        </div>
+                        <div class="column is-one-third">
+                            <img class="image is-4by5 pt-0" onClick="paperButton()" src="images/paper.png"></a>
+                        </div>
+                        <div class="column is-one-third">
+                            <img class="image is-4by5 pt-0" onClick="scissorsButton()" src="images/scissors.png"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <p class="tally title has-text-centered mb-2" id='computerScore'>Superior Machine: <strong>0</strong></p>
+
+                    <div class="columns level-item has-text-centered">
+                        <div class="column is-one-third">
+                            &nbsp;
+                        </div>
+                        <div class="column is-one-third">
+                            <p id="computer-hand">&nbsp;</p></td>
+                        </div>
+                        <div class="column is-one-third">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="header hero is-danger has-text-centered pt-0 pb-0">
+            <div class="hero-body">
+                <p class="title" id="round">
+                    Round 1 of 5
+                </p>
+                <p class="subtitle" id="score">
+                    &nbsp;
+                </p>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <div class="content has-text-centered">
+              <p>
+                Created by <strong>Frank Johnette</strong> for <a href="https://www.theodinproject.com" target="_blank">The Odin Project</a>.
+                <br><a href="https://www.vecteezy.com/free-vector/rock-paper-scissors" target="_blank">Rock Paper Scissors Vectors by Vecteezy</a>
+              </p>
+            </div>
+          </footer>
         <script src="script.js"></script>
     </body>
 </html>

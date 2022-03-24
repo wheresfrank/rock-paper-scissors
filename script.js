@@ -38,31 +38,40 @@ var playerSelection = window.playerSelection;
     if (playerSelection == 'rock') {
         if (computerSelection == 'rock') {
             document.getElementById('score').innerHTML = 'You tie! You and the computer played rock.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/rock.png">';
         } else if (computerSelection == 'paper') {
             document.getElementById('score').innerHTML = 'You lose! Computer played paper. Paper covers rock.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/paper.png">';
             computerScore = computerScore + 1;
         } else {
             document.getElementById('score').innerHTML =  'You Win! Computer played scissors. Rock smashes scissors.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/scissors.png">';
             playerScore = playerScore + 1;
         };
     } else if (playerSelection == 'paper') {
        if (computerSelection == 'paper') {
             document.getElementById('score').innerHTML =  'You tie! You and the computer played paper.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/paper.png">';
         } else if (computerSelection == 'scissors') {
             document.getElementById('score').innerHTML =  'You lose! Computer played scissors. Scissors slices paper.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/scissors.png">';
             computerScore = computerScore + 1;
         } else {
             document.getElementById('score').innerHTML = 'You Win! Computer played rock. Paper covers rock.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/rock.png">';
             playerScore = playerScore + 1;
         };
     } else {
         if (computerSelection == 'scissors') {
             document.getElementById('score').innerHTML = 'You tie! You and the computer played scissors.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/scissors.png">';
        } else if (computerSelection == 'rock') {
             document.getElementById('score').innerHTML = 'You lose! Computer played rock. Rock smashes scissors.';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/rock.png">';
             computerScore = computerScore + 1;
         } else {
             document.getElementById('score').innerHTML = 'You Win! Computer played paper. Scissors slices paper';
+            document.getElementById('computer-hand').innerHTML = '<img class="image is-4by5 pt-0" src="images/paper.png">';
             playerScore = playerScore + 1;
         };
    };
@@ -89,8 +98,8 @@ function game() {
     computerSelection = computerPlay(items);
     playRound(playerSelection, computerSelection);
     console.log('Computer plays ' + computerSelection)
-    document.getElementById('computerScore').innerHTML = 'Superior Machine:<br>' + computerScore;
-    document.getElementById('playerScore').innerHTML = 'Inferior Human:<br>' + playerScore;
+    document.getElementById('computerScore').innerHTML = 'Superior Machine: ' + computerScore;
+    document.getElementById('playerScore').innerHTML = 'Inferior Human: ' + playerScore;
     if (round < 4){
         document.getElementById('round').innerHTML = 'Round ' + (round + 2) + ' of 5';
     };
